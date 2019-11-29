@@ -12,7 +12,7 @@ function getSum(){
 
   while(sum < 4000000 ){
 
-    if(num1 % 2 === 0) {
+    if(num1 % 2 === 0) {         
       console.log('this is sum', sum = sum + num1)
     }
     if(num2 % 2 === 0){

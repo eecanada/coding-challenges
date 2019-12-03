@@ -11,6 +11,7 @@
 //  # # # #
 // # # # #
 
+// my first solution //
 let hashTag = "# # # #"
 let space = " "
 
@@ -20,3 +21,25 @@ for(let i = 0; i < 4; i++){
     console.log(hashTag + space)
   }
 }
+
+// used nested for loops, the inner for loops will run for every iteration, while the outer for loop while run too, but only go up in value once the inner for loop is done //
+
+
+// alternate solution // 
+let hashTag = "#"
+let space = " "
+
+for(let i = 0; i < 8; i++){
+  var string = '';
+  for(let j = 0; j < 4; j++){
+    if(i % 2 === 0) {
+      string += space + hashTag;
+    } else {
+      string += hashTag + space;
+    }
+  }
+  console.log(string);
+}
+
+
+

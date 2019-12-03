@@ -11,9 +11,12 @@
 //  # # # #
 // # # # #
 
+let hashTag = "# # # #"
+let space = " "
 
-for(let i = 0; i < 3; i++){
-  for(let j = 0; j < 3; j++){
-    console.log(i, j)
+for(let i = 0; i < 4; i++){
+  console.log(space + hashTag)
+  for(let j = 0; j < 1; j++){
+    console.log(hashTag + space)
   }
 }

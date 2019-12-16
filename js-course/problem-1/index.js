@@ -14,7 +14,7 @@ const markBmi = markMass / (markHeight * markHeight)
 const johnBmi = johnMass / (johnHeight * johnHeight)
 
 const isHigherBmi = johnBmi > markBmi
-console.log(`Is Mark's BMI higher than John's? ${isHigherBmi}`)
+console.log(`Is John's BMI higher than Mark's? ${isHigherBmi}`) 
 
 
 

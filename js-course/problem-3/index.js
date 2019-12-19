@@ -10,18 +10,20 @@ const tips = []
 const finalPaid =[]
 
 function calculateTip(bill){
-  if(bill < 50){
+  if(bill < 50){  
     const tip = bill * .20
     let total = bill + tip
     tips.push(tip)
     finalPaid.push(total)
     return 'bill less than 50'
+
   }else if(200 > bill && bill >= 50){
     const tip = bill * .15
     let total = bill + tip
     tips.push(tip)
     finalPaid.push(total)
     return 'bill less than 200 and more then 50'
+
   } else if(bill > 200){
     const tip =  bill *.10
     let total = bill + tip
@@ -36,7 +38,7 @@ calculateTip(124)
 calculateTip(268)
 
 
-console.log(tips)
-console.log(finalPaid)
+console.log('tips', tips)
+console.log('total', finalPaid)
 
 

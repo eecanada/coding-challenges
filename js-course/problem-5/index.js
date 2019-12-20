@@ -35,10 +35,8 @@ const john = {
   }
 }
 
-
 john.calcTotal()
 // console.log(john)
-
 
 // Mark's family also went on a holiday, going to 4 different restaurants. The bills were $77, $375, $110, and $45.
 // Mark likes to tip 20% of the bill when the bill is less than $100, 10% when the bill is between $100 and $300, and 25% if the bill is more than $300 (different than John).
@@ -46,8 +44,6 @@ john.calcTotal()
 // 6. Create a function (not a method) to calculate the average of a given array of tips. HINT: Loop over the array, and in each iteration store the current sum in a variable (starting from 0). After you have the sum of the array, divide it by the number of elements in it (that's how you calculate the average)
 // 7. Calculate the average tip for each family
 // 8. Log to the console which family paid the highest tips on average
-
-
 
 const mark = {
   bills : [77,375,110,45],
@@ -78,8 +74,7 @@ const mark = {
 mark.calcTotal()
 // console.log(mark)
 
-
-///////////////////////////////////////AVERAGE TIPS////////////////////////////////////////
+/////////////////////AVERAGE TIPS////////////////////////////
 let sum = 0
 function calcAverage() { 
   for(let i = 0; i < mark.tips.length; i++){
@@ -96,7 +91,7 @@ let sum1 = 0
 function calcAverage1() { 
   for(let i = 0; i < john.tips.length; i++){
     sum1 = sum1 + john.tips[i]
-    avg = sum / john.tips.length
+    avg = sum1 / john.tips.length
   }
   // cannot return inside a for loop
   return avg

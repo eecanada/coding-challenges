@@ -36,7 +36,7 @@ const john = {
 }
 
 john.calcTotal()
-// console.log(john)
+console.log(john)
 
 // Mark's family also went on a holiday, going to 4 different restaurants. The bills were $77, $375, $110, and $45.
 // Mark likes to tip 20% of the bill when the bill is less than $100, 10% when the bill is between $100 and $300, and 25% if the bill is more than $300 (different than John).
@@ -72,7 +72,7 @@ const mark = {
 }
 
 mark.calcTotal()
-// console.log(mark)
+console.log(mark)
 
 /////////////////////AVERAGE TIPS////////////////////////////
 let sum = 0

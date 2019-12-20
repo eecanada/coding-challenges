@@ -78,3 +78,29 @@ const mark = {
 mark.calcTotal()
 // console.log(mark)
 
+
+///////////////////////////////////////AVERAGE TIPS////////////////////////////////////////
+let sum = 0
+function calcAverage() { 
+  for(let i = 0; i < mark.tips.length; i++){
+    sum = sum + mark.tips[i]
+    avg = sum / mark.tips.length
+  }
+  // cannot return inside a for loop
+  return avg
+ }
+ console.log(calcAverage(), 'mark tip')
+
+
+let sum1 = 0
+function calcAverage1() { 
+  for(let i = 0; i < john.tips.length; i++){
+    sum1 = sum1 + john.tips[i]
+    avg = sum / john.tips.length
+  }
+  // cannot return inside a for loop
+  return avg
+ }
+ console.log(calcAverage1(), 'john tip')
+
+ console.log(calcAverage1() < calcAverage())

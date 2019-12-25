@@ -10,11 +10,13 @@
 // compare all values in the array and select the highest one 
 
 
-
-function findLargestPrimeFactor(num){
-  if(num % 2  === 0){
-    console.log('not prime')
-  }
+let divider = 2;
+let num = 600851475143;
+while(num > 1){
+    if(num % divider === 0){ 
+        num /= divider;
+    } else {
+        divider++;
+    }
 }
-
-findLargestPrimeFactor(100)
+console.log(divider);

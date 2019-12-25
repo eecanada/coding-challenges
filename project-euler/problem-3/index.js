@@ -14,9 +14,12 @@ let divider = 2;
 let num = 600851475143;
 while(num > 1){
     if(num % divider === 0){ 
-        num /= divider;
+        num = num / divider;
     } else {
         divider++;
     }
 }
 console.log(divider);
+
+
+

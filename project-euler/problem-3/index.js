@@ -8,3 +8,13 @@
 // function checks if the number has a prime factor 
 // if it is primer number, store results in an array 
 // compare all values in the array and select the highest one 
+
+
+
+function findLargestPrimeFactor(num){
+  if(num % 2  === 0){
+    console.log('not prime')
+  }
+}
+
+findLargestPrimeFactor(100)

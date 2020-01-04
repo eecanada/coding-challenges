@@ -1,4 +1,4 @@
-// checl if character is a letter
+// check if character is a letter
 
 let ch = 'a'
 if(/[a-zA-Z]/.test(ch))

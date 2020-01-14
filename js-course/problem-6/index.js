@@ -17,9 +17,15 @@
 
 // prompt('what is the question')
 
-function randomQuestion(){
+const Question = function(question, answer){
   const arrOfQuestions = ['what is my name?','what is 2 + 2?', 'what is your job?']
-  const questions = Math.floor(Math.random() * 3) 
-  console.log(arrOfQuestions[questions])
+  this.question = question,
+  this.answer = answer,
+  this.randomQuestion = function (){
+    const questions = Math.floor(Math.random() * 3) 
+    console.log(arrOfQuestions[questions])
+  }
 }
-randomQuestion()
+
+const tim = new Question()
+tim.randomQuestion()

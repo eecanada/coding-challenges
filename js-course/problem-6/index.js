@@ -15,17 +15,47 @@
 
 // 7. Suppose this code would be a plugin for other programmers to use in their code. So make sure that all your code is private and doesn't interfere with the other programmers code (Hint: we learned a special technique to do exactly that).
 
-// prompt('what is the question')
 
-const Question = function(question, answer){
-  const arrOfQuestions = ['what is my name?','what is 2 + 2?', 'what is your job?']
-  this.question = question,
-  this.answer = answer,
-  this.randomQuestion = function (){
-    const questions = Math.floor(Math.random() * 3) 
-    console.log(arrOfQuestions[questions])
+// (1) this is my function constructor 
+function Question (questions, answers, correct){
+  this.questions = questions 
+  this. answers = answers
+  this.correct = correct
+}
+
+// (4) using prototype to add a function to my Question constuctor, this logs the questions and loops through the answers
+Question.prototype.logQuestion = function (){
+  console.log(this.questions)
+  for(let i = 0; i < this.answers.length; i++){
+    console.log(`${i}:${this.answers[i]}`)
   }
 }
 
-const tim = new Question()
-tim.randomQuestion()
+// (6) create a new function to check the answer and what I pass through it as a parameter is the answer from my prompt to check with the correct answer
+Question.prototype.checkAnswer = function (answer){
+  if(answer === this.correct){
+    console.log('Correct answer, good job!')
+  } else {
+    console.log('Wrong answer, try again.')
+  }
+}
+
+// (2) questions that are instances of the function constructor Question
+const questionOne = new Question ('is Javascript a fun lanaguage to learn?', ['Yes', 'No'], 0)
+
+const questionTwo = new Question ('is this game fun?', ['Yes', 'No', 'Maybe'], 0)
+
+const questionThree = new Question('what is my name?', ['Eddar','Eder', 'Ether'], 1 )
+
+// (3) Store them all inside an array
+const allQuestions = [questionOne,questionTwo,questionThree]
+const random = Math.floor(Math.random() * 3)
+
+// (4) add this logQuestion function to my random question 
+allQuestions[random].logQuestion()
+
+// (5) parseInt converts my answer from string to number
+const answer = parseInt(prompt('What is the correct answer?'))
+
+// (6) add the checkAnswer function to the random question
+allQuestions[random].checkAnswer(answer)

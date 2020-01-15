@@ -15,55 +15,51 @@
 
 // 7. Suppose this code would be a plugin for other programmers to use in their code. So make sure that all your code is private and doesn't interfere with the other programmers code (Hint: we learned a special technique to do exactly that).
 
+// // (7) Immediatly invoked function expression, allows the code to be used as a plugin and no variables inside the block can be used outside of this block.
+// // (function(){
 
-// (1) this is my function constructor 
-(function() {
-  function Question (questions, answers, correct){
+// // })()
+
+(function (){
+  //(1) build a function constuctor for Questions 
+  const Question = function (questions, answers, correct){
     this.questions = questions 
-    this. answers = answers
+    this.answers = answers
     this.correct = correct
   }
   
   // (4) using prototype to add a function to my Question constuctor, this logs the questions and loops through the answers
-  Question.prototype.logQuestion = function (){
+  Question.prototype.displayQuestionAndAnswers = function (){
     console.log(this.questions)
     for(let i = 0; i < this.answers.length; i++){
-      console.log(`${i}:${this.answers[i]}`)
+      console.log(`${i}: ${this.answers[i]}`)
     }
   }
   
-  // (6) create a new function to check the answer and what I pass through it as a parameter is the answer from my prompt to check with the correct answer
+  // (6) a function that takes in the answer I submitted in my prompt and compares it to the correct answer 
   Question.prototype.checkAnswer = function (answer){
-    if(answer === this.correct){
-      console.log('Correct answer, good job!')
+    if(answer === this.correct ){
+      console.log('Correct!')
     } else {
-      console.log('Wrong answer, try again.')
+      console.log('Wrong!')
     }
   }
   
-  // (2) questions that are instances of the function constructor Question
-  const questionOne = new Question ('is Javascript a fun lanaguage to learn?', ['Yes', 'No'], 0)
+  // (2) created three instances of the Question constructor
+  const questionOne = new Question ('what is your favorite language?', ['Javascript','Python','Java'], 0)
+  const questionTwo = new Question('everything in javascript is a(n)?',['function', 'object', 'array'], [1])
+  const questionThree = new Question('Which company created React?', ['google', 'apple', 'facebook'], 2)
   
-  const questionTwo = new Question ('is this game fun?', ['Yes', 'No', 'Maybe'], 0)
-  
-  const questionThree = new Question('what is my name?', ['Eddar','Eder', 'Ether'], 1 )
-  
-  // (3) Store them all inside an array
+  // (3) stored all my questions into an array and am able to generate a random question
   const allQuestions = [questionOne,questionTwo,questionThree]
-  const random = Math.floor(Math.random() * 3)
+  const randomNumber = Math.floor(Math.random() * 3)
   
-  // (4) add this logQuestion function to my random question 
-  allQuestions[random].logQuestion()
+  // (4) add this logQuestion function to my random question
+  allQuestions[randomNumber].displayQuestionAndAnswers()
   
-  // (5) parseInt converts my answer from string to number
-  const answer = parseInt(prompt('What is the correct answer?'))
+  // (5) parse my prompt from a string to a number
+  const answer = parseInt(prompt('What is the correct answer? Type in the correct number'))
   
-  // (6) add the checkAnswer function to the random question
-  allQuestions[random].checkAnswer(answer)
-})()
-
-
-// (7) Immediatly invoked function expression, allows the code to be used as a plugin and no variables inside the block can be used outside of this block.
-// (function(){
-
-// })()
+  // (6) add check answer function to the random question and pass my prompt response as a parameter
+  allQuestions[randomNumber].checkAnswer(answer)
+}) ()

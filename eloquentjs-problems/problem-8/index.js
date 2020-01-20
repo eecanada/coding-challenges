@@ -9,5 +9,17 @@ function arrList(start, end){
   return numbers
 }
 
-const numArr = arrList(1,5)
+const numArr = arrList(1,10)
 console.log(numArr) 
+
+// Next, write a sum function that takes an array of numbers and returns the sum of these numbers. Run the previous program and see whether it does indeed return 55.
+
+function addArr(arr){
+  sum = 0
+  for(let i = 0; i < arr.length; i++){
+    sum = arr[i] + sum
+  }
+  console.log(sum)
+}
+
+addArr(numArr)

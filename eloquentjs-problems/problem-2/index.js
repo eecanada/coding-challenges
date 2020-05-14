@@ -15,3 +15,10 @@ for (let i = 0; i < 7; i++){
   console.log(num)
   num = num + num1
 }
+
+
+//ALTERNATE SOLUTION
+let sign = ["#","##","###","####","#####","######","#######"]
+ for(let i = 0 ; i < 7; i = i + 1){
+   console.log(sign[i])
+ }

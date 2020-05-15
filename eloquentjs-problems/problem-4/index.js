@@ -42,4 +42,16 @@ for(let i = 0; i < 8; i++){
 }
 
 
+// alernate solution 
+
+let sign = "# # # #"
+let sign2 =" # # # #"
+for(let i = 1; i <= 8; i++){
+  if(i % 2 === 0){
+    console.log(sign)
+  }else{
+    console.log(sign2)
+  }
+}
+ 
 

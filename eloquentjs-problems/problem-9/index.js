@@ -27,24 +27,16 @@ console.log(range(20,50))
 
 
 
-
-
-
-
-
-
-
-
 // Next, write a sum function that takes an array of numbers and returns the sum of these numbers. Run the previous program and see whether it does indeed return 55.
-function addArr(arr){
-  sum = 0
-  for(let i = 0; i < arr.length; i++){
-    sum = arr[i] + sum
+function sum(nums) {
+  let sum = 0
+  for (let num of nums) {
+    sum = sum + num
   }
-  console.log(sum)
+  return sum
 }
+console.log(sum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
 
-addArr(numArr)
 
 
 

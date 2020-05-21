@@ -41,20 +41,22 @@ console.log(sum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
 
 
 //modify your range function to take an optional third argument that indicates the “step” value used to build up the array. If no step is given, the array elements go up by increments of one, corresponding to the old behavior.
-function arrList(start, end, step){
-  const numbers = []
-  if(step == null){
+function range(start,end,step){
+  let arr = []
+  if(typeof(step) === "undefined"){
     for(let i = start; i <= end; i++){
-      numbers.push(i)
+      arr.push(i)
     }
-    return numbers 
+  } else if (step < 0){
+    for(let i = start; i >= end; i = i - Math.abs(step)){
+      arr.push(i)
+    }
   } else {
     for(let i = start; i <= end; i = i + step){
-      numbers.push(i)
+      arr.push(i)
     }
-    return numbers
-  }
+  } 
+  return arr
 }
 
-const numArr = arrList(1,10)
-console.log(numArr) 
+console.log(range(10,1,-2))

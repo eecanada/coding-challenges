@@ -11,6 +11,29 @@ const numArr = arrList(1,10)
 console.log(numArr) 
 
 
+// alternate solution
+function range(start,end){
+  arr = []
+  while (end >= start){
+    console.log(start)
+    arr.push(start)
+    start++  
+    }
+    return arr
+  }
+
+console.log(range(20,50))
+
+
+
+
+
+
+
+
+
+
+
 
 // Next, write a sum function that takes an array of numbers and returns the sum of these numbers. Run the previous program and see whether it does indeed return 55.
 function addArr(arr){

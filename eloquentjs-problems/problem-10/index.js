@@ -2,15 +2,15 @@
 // and produces a new array that has the same elements in the inverse order.
 
 
-// let reverseArray = arr => {
-//   let newArr = []
-//   for (let i = arr.length-1; i >= 0; i--) {
-//     newArr.push(arr[i])
-//   }
-//   return newArr
-// }
+let reverseArray = arr => {
+  let newArr = []
+  for (let i = arr.length-1; i >= 0; i--) {
+    newArr.push(arr[i])
+  }
+  return newArr
+}
 
-// console.log(reverseArray([1,2,3]))
+console.log(reverseArray([1,2,3]))
 
 
 // The second, reverseArrayInPlace, does what the reverse method does: it modifies
@@ -21,13 +21,13 @@ function reverseArrayInPlace(arr) {
   for (let i = arr.length - 1; i >= 0; i--) {
     arr.push(arr[i])
   }
-  for(let i = 0; i <= arr.length/2 + 1; i++){
+  for(let i = 0; i < arr.length/2 + 1 ; i++){
     arr.shift()
   }
   return arr
 }
 
-console.log(reverseArrayInPlace([7, 0, 9, 2]))
+console.log(reverseArrayInPlace([7, 0, 9]))
 
 
 

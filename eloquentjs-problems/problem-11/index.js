@@ -1,20 +1,14 @@
-// Write a function deepEqual that takes two values and returns true only if they are the same value or are objects with the same properties,
+// Write a function arrayToList that builds up a list structure like the one
+// shown when given [1, 2, 3] as argument.
 
 
-function deepEqual(obj, obj){
-  if (obj.value === obj.value){
-    console.log('true')
-  } else if (obj === {here: 1, object:2}) {
-    console.log('false')
+function arrayToList(...arr) {
+  let list = null;
+  for (let i = arr.length - 1; i >= 0; i--) {
+    list = {value: arr[i], rest: list};
   }
+  return list;
 }
 
-const obj = {
-  here: {is: 'an'}, 
-  object:2
-}
+console.log(arrayToList(1,2,3))
 
-console.log(deepEqual(obj, {here: 1, object: 2}));
-
-console.log(obj.here, 'yo')
-console.log(obj.object, 'hi')

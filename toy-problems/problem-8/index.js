@@ -75,6 +75,13 @@ console.log(message); //string with spaces
 const name = 'bob';
 const age = 20;
 const obj = {name, age};
-console.log(obj);
+console.log(obj);//{name:'bob, age:20}
 
-//{name:'bob, age:20}
+
+//What is the output of the following code?
+const confused = 'no';
+const myKey = confused;
+const obj = {
+    [myKey]: false
+}
+console.log(obj); //{'no':false}

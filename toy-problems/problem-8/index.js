@@ -85,3 +85,15 @@ const obj = {
     [myKey]: false
 }
 console.log(obj); //{'no':false}
+
+//What is the output of the following code?
+const piece = {
+  x: 0,
+  y: 0,
+  move (x, y) {
+    this.x = x;
+    this.y = y;
+  }
+}
+piece.move(10, 10);
+console.log(piece); //{{x:10, y:10}} 

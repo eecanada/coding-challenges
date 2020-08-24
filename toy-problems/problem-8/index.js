@@ -34,3 +34,13 @@ console.log(user);
   },
   numbers: [7,1]
 }
+
+
+////What is the output of the following code?
+function sum(...numbers) {
+  return numbers.reduce((acc, number) => acc + number);
+}
+
+const answer = sum(1, 5, 20, 10);
+
+console.log(answer); //36

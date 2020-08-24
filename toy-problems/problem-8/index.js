@@ -67,6 +67,14 @@ const message = `there
 is
 no
   cow
-level
-`
+level`
 console.log(message); //string with spaces
+
+
+//What is the output of the following code?
+const name = 'bob';
+const age = 20;
+const obj = {name, age};
+console.log(obj);
+
+//{name:'bob, age:20}

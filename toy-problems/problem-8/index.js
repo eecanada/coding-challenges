@@ -52,5 +52,11 @@ function multiplyBy2(base, ...numbers) {
 }
 
 const answer = multiplyBy2(100, 1, 5, 20, 10);
-
 console.log(answer); //[102,110,140,120]
+
+
+// //What is the output of the following code?
+const names = ['roger', 'alex', 'bob'];
+const message = `Will the following ${names.length} students please report to the office: ${names.join(', ')}`
+console.log(message);
+// Will the following 3 students please report to the office: roger, alex, bob

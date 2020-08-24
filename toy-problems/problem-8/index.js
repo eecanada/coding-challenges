@@ -36,7 +36,7 @@ console.log(user);
 }
 
 
-////What is the output of the following code?
+//What is the output of the following code?
 function sum(...numbers) {
   return numbers.reduce((acc, number) => acc + number);
 }
@@ -44,3 +44,13 @@ function sum(...numbers) {
 const answer = sum(1, 5, 20, 10);
 
 console.log(answer); //36
+
+
+// //What is the output of the following code?
+function multiplyBy2(base, ...numbers) {
+  return numbers.map(number => number * 2 + base)
+}
+
+const answer = multiplyBy2(100, 1, 5, 20, 10);
+
+console.log(answer); //[102,110,140,120]

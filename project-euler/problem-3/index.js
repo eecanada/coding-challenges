@@ -2,7 +2,6 @@
 
 // What is the largest prime factor of the number 600851475143 ?
 
-
 // create function to find largest prime factor
 // function takes in number to check 
 // function checks if the number has a prime factor 

@@ -1,9 +1,13 @@
 function birthdayCakeCandles(candles) {
-  for(let i =0; i < candles; i++){
-    console.log(i + 1)
-    
+  let highNumber = Math.max(...candles)
+  let candleHeight = []
+  for(let i = 0; i < candles.length;i++){
+    if (highNumber === candles[i]){
+      candleHeight.push(candles[i])
+    }
   }
-
+  return candleHeight.length
 }
 
-birthdayCakeCandles(4)
+let eder = birthdayCakeCandles([3,2,1,3])
+console.log(eder)

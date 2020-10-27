@@ -25,5 +25,5 @@ function compareTriplets(a, b) {
   return score
 }
 
-let sum = compareTriplets([1,2,1],[5,7,1])
+let sum = compareTriplets([5,6,7],[3,6,10])
 console.log(sum)

@@ -26,8 +26,15 @@ function gradingStudents(...grades) {
   return finalGrades
 }
 
-let eder = gradingStudents(30, 58, 55, 101);
+let eder = gradingStudents(39, 56, 67, 98, 23);
 console.log(eder)
+
+
+
+
+
+
+
 
 
 

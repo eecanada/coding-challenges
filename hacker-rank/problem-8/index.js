@@ -1,9 +1,9 @@
-function gradingStudents(...grades) {
+function gradingStudents(grades) {
   let newGrades = [];
   let originalGrades = [...grades];
   let finalGrades = []
   for (let i = 0; i < grades.length; i++) {
-    if (grades[i] > 0 && grades[i] <= 100) {
+    if (grades[i] >= 0 && grades[i] <= 100) {
       if(grades[i] % 5  == 0){
         newGrades.push(grades[i])
       } else{
@@ -26,7 +26,7 @@ function gradingStudents(...grades) {
   return finalGrades
 }
 
-let eder = gradingStudents(39, 56, 67, 98, 23);
+let eder = gradingStudents([0, 23, 79, 98, 23]);
 console.log(eder)
 
 

@@ -30,3 +30,31 @@ function countChar(str,letter){
   return count.length
 }
 console.log(countChar('eder','e'))
+
+
+function countBs(str) {
+  let count = 0;
+  for (letter of str) {
+    if (letter === 'B') {
+      count++;
+    }
+  }
+  return count;
+}
+
+const numberOfBs = countBs('BOBBY');
+console.log(numberOfBs);
+
+
+function countChar(str,character) {
+  let count = 0;
+  for (letter of str) {
+    if (letter === character) {
+      count++;
+    }
+  }
+  return count;
+}
+
+const countOfChar = countChar('BOBBY', '0');
+console.log(countOfChar);

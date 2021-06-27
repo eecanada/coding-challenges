@@ -60,3 +60,15 @@ function range(start,end,step){
 }
 
 console.log(range(10,1,-2))
+
+function sumRange(start,end){
+  let total = 0
+  for(let i  = start; i <= end; i++ ){
+    total += i 
+  }
+  return total
+}
+
+let solution = sumRange(1,3)
+console.log(solution)
+

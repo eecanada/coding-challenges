@@ -62,9 +62,9 @@ function range(start,end,step){
 console.log(range(10,1,-2))
 
 function sumRange(start,end){
-  let total = 0
+  let total = []
   for(let i  = start; i <= end; i++ ){
-    total += i 
+    total.push(i)
   }
   return total
 }

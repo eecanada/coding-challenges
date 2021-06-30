@@ -1,41 +1,14 @@
-//////////////////////////////////////////////////////
-function Range(start, end) {
-  let range = [];
-  for (let i = start; i <= end; i++) {
-    range.push(i);
+var t0 = performance.now()
+
+let reverseArray = arr => {
+  let newArr = []
+  for (let i = arr.length-1; i >= 0; i--) {
+    newArr.push(arr[i])
   }
-  return range;
+  return newArr
 }
 
-let solution = Range(1, 10);
-console.log(solution);
-/////////////////////////////////////////////////////
-function Sum(arr) {
-  let total = 0;
-  for (value of arr) {
-    total += value;
-  }
-  return total;
-}
+var t1 = performance.now()
 
-const results = Sum([1, 2, 3]);
-console.log(results);
-//////////////////////////////////////////////////////
-function modRange(start, end, steps = 1) {
-  let range = [];
-
-  if (start < end) {
-    for (let i = start; i <= end; i += steps) {
-      range.push(i);
-    }
-  }
-  if (end < start) {
-    for (let i = start; i >= end; i += steps) {
-      range.push(i);
-    }
-  }
-  return range;
-}
-
-let modSolution = modRange(1, 10);
-console.log(modSolution);
+// console.log(reverseArray([1,2,3]))
+console.log(reverseArray([1,2,3]) + (t1 - t0) + " milliseconds.")

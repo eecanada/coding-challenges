@@ -17,17 +17,20 @@ console.log(reverseArray([1,2,3]))
 // the array given as argument by reversing its elements. Neither may use the
 // standard reverse method.
 
+
 function reverseArrayInPlace(arr) {
   for (let i = arr.length - 1; i >= 0; i--) {
-    arr.push(arr[i])
+    arr.push(arr[i]);
   }
-  for(let i = 0; i < arr.length/2 + 1 ; i++){
-    arr.shift()
+  let arrLength = arr.length / 2;
+  for (let i = 0; i < arrLength; i++) {
+    console.log(arr.length, 'arr/length/2');
+    arr.shift();
   }
-  return arr
+  return arr;
 }
 
-console.log(reverseArrayInPlace([7, 0, 9]))
+console.log(reverseArrayInPlace([7, 0, 9, 5, 9, 10]));
 
 
 

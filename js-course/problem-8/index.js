@@ -54,6 +54,7 @@ console.log(calcOdd());
 
 // 3. 
 for(let [team, odd] of Object.entries(game.odds)){
+  console.log();
   const teamStr = team === "x" ? "draw" : `victory ${game[team]}`
   console.log(`Odds of ${teamStr} ${odd}`);
 }

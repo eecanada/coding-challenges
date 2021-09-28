@@ -21,13 +21,12 @@ const kateData = [10, 5, 6, 1, 4];
 function checkDogs(arr1, arr2) {
   const juliaDogsOnly = arr1.slice(1, 3);
   const shallowKateData = [...arr2]
-  console.log(juliaDogsOnly);
   const correctArrayCombined = [...juliaDogsOnly,...shallowKateData]
   correctArrayCombined.forEach(function(age, index){
     if(age >= 3){
        console.log(`Dog number ${index + 1} is an adult, and is ${age} years old"`)
     } else {
-      console.log(`Dog number ${index + 1} is a puppy and is ${age} years old"`)
+      console.log(`Dog number ${index + 1} is a puppy 🐶 and is ${age} years old"`)
     }
    
   })

@@ -65,7 +65,6 @@ document.querySelector('button').addEventListener('click', function () {
     lettersSplit[addOne] = lettersSplit[addOne].toUpperCase();
     let camel = lettersSplit.join('');
     camelCase.push(camel.replace('_', ''));
-    console.log(camelCase);
   }
 
   let emptyPad = [];
@@ -73,7 +72,6 @@ document.querySelector('button').addEventListener('click', function () {
     emptyPad.push(camelWord.padEnd(20, '  '));
   }
 
-  console.log(emptyPad);
 
   for (let i = 0; i < emptyPad.length; i++) {
     let sum = 21;

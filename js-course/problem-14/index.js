@@ -33,3 +33,42 @@ EV.prototype.accelerate = function () {
 };
 
 const tesla = new EV('tesla', 100, 50);
+
+///////////////////////CLASSES/////////////////////////
+
+class CarCl {
+  constructor(make, currentSpeed) {
+    this.make = make;
+    this.currentSpeed = currentSpeed;
+  }
+
+  brake(currentSpeed) {
+    this.currentSpeed -= 10;
+    console.log(`${this.make} is going at ${this.currentSpeed} mph `);
+    return this;
+  }
+}
+
+class EvCl extends CarCl {
+  #charge;
+  constructor(make, currentSpeed, charge) {
+    super(make, currentSpeed);
+    this.#charge = charge;
+  }
+  chargeBattery(percentage) {
+    this.#charge = percentage;
+    return this;
+  }
+  accelerate(currentSpeed) {
+    this.currentSpeed += 10;
+    this.#charge -= 1;
+    console.log(
+      `${this.make} is going at ${this.currentSpeed} mph and battery is at ${
+        this.#charge
+      }`
+    );
+    return this;
+  }
+}
+
+const tezzy = new EvCl('telsa', 75, 59);

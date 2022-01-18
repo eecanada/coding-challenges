@@ -31,9 +31,12 @@ function whereAmI(lat, lng) {
       return response.json();
     })
     .then((data) => {
+
+      console.log(data);
       console.log(`Your are in ${data.city} ${data.country}`);
     })
     .catch((err) => console.log(err.message));
 }
 
 whereAmI(51.503548, -0.127689);
+ 

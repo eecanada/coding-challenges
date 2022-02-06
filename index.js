@@ -12,3 +12,4 @@ var t1 = performance.now()
 
 // console.log(reverseArray([1,2,3]))
 console.log(reverseArray([1,2,3]) + (t1 - t0) + " milliseconds.")
+op
